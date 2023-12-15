@@ -61,10 +61,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Animals\FarmEdition\Scripts\AnimalController.cs" />
+    <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\FreeCameraLogic.cs" />
+    <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\DemoFree.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Animals\FarmEdition\Scripts\RotateStand.cs" />
     <Compile Include="Assets\Farm\Demo\Scripts\Move.cs" />
+    <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\SimpleSampleCharacterControl.cs" />
     <Compile Include="Assets\Farm\Demo\Scripts\Rotate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Supercyan Character Pack Free Sample\Shaders\Legacy\CelShader.shader" />
+    <None Include="Assets\Supercyan Character Pack Free Sample\Shaders\SupercyanShader.shader" />
+    <None Include="Assets\Supercyan Character Pack Free Sample\Shaders\SupercyanShaderLighting.cginc" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
