@@ -110,6 +110,10 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         {
             m_jumpInput = true;
         }
+        if (!m_jumpInput && Input.GetKey(KeyCode.E))
+        {
+            m_jumpInput = true;
+        }
     }
 
     private void FixedUpdate()
