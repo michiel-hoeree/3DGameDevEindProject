@@ -1,21 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class cameraswitcher : MonoBehaviour
 {
     public Camera thirdPersonCamera;
     public Camera firstPersonCamera;
+    public Text thirdPersonScoreText;  // Voor third-person camera
+    public Text firstPersonScoreText;  // Voor first-person camera
 
     void Start()
     {
-        // Zorg ervoor dat de third-person camera is ingeschakeld en de first-person camera is uitgeschakeld bij het starten.
         EnableThirdPersonCamera();
     }
 
     void Update()
     {
-        // Schakel tussen third-person en first-person camera bij het indrukken van de "C"-toets.
         if (Input.GetKeyDown(KeyCode.C))
         {
             if (thirdPersonCamera.enabled)
@@ -29,11 +31,23 @@ public class cameraswitcher : MonoBehaviour
     {
         thirdPersonCamera.enabled = true;
         firstPersonCamera.enabled = false;
+
+        // Zet de scoretekst voor third-person camera op actief
+        thirdPersonScoreText.enabled = true;
+
+        // Verberg de scoretekst voor first-person camera
+        firstPersonScoreText.enabled = false;
     }
 
     void EnableFirstPersonCamera()
     {
         thirdPersonCamera.enabled = false;
         firstPersonCamera.enabled = true;
+
+        // Zet de scoretekst voor first-person camera op actief
+        firstPersonScoreText.enabled = true;
+
+        // Verberg de scoretekst voor third-person camera
+        thirdPersonScoreText.enabled = false;
     }
 }
