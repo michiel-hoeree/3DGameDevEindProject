@@ -31,6 +31,12 @@ public class Beweging : MonoBehaviour
             Debug.Log("Auto geraakt! Score verlaagd naar: " + score);
             Destroy(other.gameObject); // Vernietig de auto
         }
+        else if (other.gameObject.CompareTag("Bus"))
+        {
+            VerhoogScore();
+            Debug.Log("Bus geraakt! Score Verhoogd naar: " + score);
+            Destroy(other.gameObject); // Vernietig de auto
+        }
     }
 
     public void VerhoogScore()
