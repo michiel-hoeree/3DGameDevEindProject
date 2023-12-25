@@ -54,15 +54,14 @@ public class Beweging : MonoBehaviour
     {
         score += 1;
         Debug.Log("Je hebt een fiets geraakt! Score +10. Huidige score: " + score);
-        characterControl.m_moveSpeed += 1.0f; // Verhoog de snelheid met 1.0f, pas dit aan op basis van wat je wilt.
+        characterControl.m_moveSpeed += 2; // Verhoog de snelheid met 1.0f.
         Debug.Log("Je hebt een punt gescoord! Nieuwe snelheid: " + characterControl.m_moveSpeed);
-
     }
     public void VerlaagScore()
     {
         score -= 1;
         Debug.Log("Je hebt een auto geraakt! Score -5. Huidige score: " + score);
-        characterControl.m_moveSpeed = 2.0f; // Zet de snelheid terug naar de oorspronkelijke waarde (of wat je als normaal beschouwt).
+        characterControl.m_moveSpeed = 5; // Zet de snelheid terug naar de oorspronkelijke waarde (of wat je als normaal beschouwt).
         Debug.Log("Je hebt een score verloren! Nieuwe snelheid: " + characterControl.m_moveSpeed);
     }
 }
