@@ -15,6 +15,7 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         Direct
     }
 
+
     [SerializeField] private float m_moveSpeed = 2;
     [SerializeField] private float m_turnSpeed = 200;
     [SerializeField] private float m_jumpForce = 4;
@@ -39,9 +40,19 @@ public class SimpleSampleCharacterControl : MonoBehaviour
     private float m_minJumpInterval = 0.25f;
     private bool m_jumpInput = false;
 
+    private readonly string[] m_animations = { "Pickup", "Wave" };
+    private Animator[] m_animators = null;
+
     private bool m_isGrounded;
 
     private List<Collider> m_collisions = new List<Collider>();
+
+
+
+    private void Start()
+    {
+        m_animators = FindObjectsOfType<Animator>();
+    }
 
     private void Awake()
     {
@@ -112,7 +123,10 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         }
         if (!m_jumpInput && Input.GetKey(KeyCode.E))
         {
-            m_jumpInput = true;
+            for (int j = 0; j < m_animators.Length; j++)
+            {
+                m_animators[j].SetTrigger(m_animations[0]);
+            }
         }
     }
 
@@ -222,4 +236,7 @@ public class SimpleSampleCharacterControl : MonoBehaviour
             m_animator.SetTrigger("Jump");
         }
     }
+
+
+
 }
