@@ -8,7 +8,6 @@ public class Beweging : MonoBehaviour
     public SimpleSampleCharacterControl characterControl; // Referentie naar het script van je speler.
 
 
-    private ScoreManager scoreManager;
     public int score = 0;
 
     private void Start()
@@ -16,7 +15,6 @@ public class Beweging : MonoBehaviour
         characterControl = GetComponent<SimpleSampleCharacterControl>();
 
         Debug.Log("Start methode aangeroepen.");
-        scoreManager = GameObject.Find("GameManager").GetComponent<ScoreManager>();
     }
 
     private void OnTriggerEnter(Collider other)
