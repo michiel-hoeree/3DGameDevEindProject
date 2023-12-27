@@ -11,51 +11,43 @@ public class kip : MonoBehaviour
     public Vector3 hoekpunt3 = new Vector3(10f, 0f, -10f);
     public Vector3 hoekpunt4 = new Vector3(-10f, 0f, 10f);
 
-    private float timer; // Timer om het interval bij te houden
-
-    
-
-    void Start()
+    private void Start()
     {
+        // Begin met een initiële positie binnen de rechthoek
+        transform.position = new Vector3(Random.Range(hoekpunt1.x, hoekpunt2.x), 0f, Random.Range(hoekpunt1.z, hoekpunt2.z));
         VeranderRichting(); // Start met een initiële richtingsverandering
     }
 
-    void Update()
+    private void Update()
     {
-        // Beweeg de kip in de huidige richting (beperk beweging tot z en x as)
+        // Beweeg de kip alleen in het x-z vlak
         transform.Translate(Vector3.forward * snelheid * Time.deltaTime);
         transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
 
-        // Controleer of de kip binnen de rechthoekige grenzen is en corrigeer indien nodig
+        // Controleer of de kip binnen de rechthoekige grenzen is en verander de richting indien nodig
         ControleerGrens();
-
-        // Tel de tijd op
-        timer += Time.deltaTime;
-
-        // Controleer of het tijd is om van richting te veranderen
-        if (timer >= veranderRichtingInterval)
-        {
-            VeranderRichting();
-        }
     }
 
-    void VeranderRichting()
+    private void VeranderRichting()
     {
         // Genereer een willekeurige rotatie binnen de opgegeven hoekpunten van de rechthoek
         float willekeurigeRotatieX = Random.Range(hoekpunt1.x, hoekpunt2.x);
         float willekeurigeRotatieZ = Random.Range(hoekpunt1.z, hoekpunt2.z);
-        transform.rotation = Quaternion.Euler(willekeurigeRotatieX, 0f, willekeurigeRotatieZ);
-
-        // Reset de timer
-        timer = 0f;
+        transform.rotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
     }
 
-    void ControleerGrens()
+    private void ControleerGrens()
     {
         // Controleer of de kip binnen de rechthoekige grenzen is
         Vector3 huidigePositie = transform.position;
         huidigePositie.x = Mathf.Clamp(huidigePositie.x, Mathf.Min(hoekpunt1.x, hoekpunt2.x, hoekpunt3.x, hoekpunt4.x), Mathf.Max(hoekpunt1.x, hoekpunt2.x, hoekpunt3.x, hoekpunt4.x));
         huidigePositie.z = Mathf.Clamp(huidigePositie.z, Mathf.Min(hoekpunt1.z, hoekpunt2.z, hoekpunt3.z, hoekpunt4.z), Mathf.Max(hoekpunt1.z, hoekpunt2.z, hoekpunt3.z, hoekpunt4.z));
         transform.position = huidigePositie;
+
+        // Controleer of de kip een grens heeft bereikt en verander de richting indien nodig
+        if (huidigePositie.x == hoekpunt1.x || huidigePositie.x == hoekpunt2.x || huidigePositie.z == hoekpunt1.z || huidigePositie.z == hoekpunt3.z)
+        {
+            VeranderRichting();
+        }
     }
 }
