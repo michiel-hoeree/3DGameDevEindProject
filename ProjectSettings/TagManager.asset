@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Chicken
   - Fence
+  - Voedsel
+  - Speler
   layers:
   - Default
   - TransparentFX
