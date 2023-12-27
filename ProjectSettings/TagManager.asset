@@ -8,6 +8,7 @@ TagManager:
   - Fence
   - Voedsel
   - Speler
+  - Voederbak
   layers:
   - Default
   - TransparentFX
