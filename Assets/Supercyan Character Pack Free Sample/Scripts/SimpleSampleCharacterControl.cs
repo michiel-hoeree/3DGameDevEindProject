@@ -137,18 +137,13 @@ public class SimpleSampleCharacterControl : MonoBehaviour
     private void tryPickup()
     {
 
-        // Raycast to check for objects in front of the character
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, pickupRange))
         {
-            // Check if the hit object has the specified tag
             if (hit.collider.CompareTag("Pickupable"))
             {
-                // Perform pickup logic
-                // For example, you can destroy the object
-                //Destroy(hit.collider.gameObject);
                 hit.collider.gameObject.SetActive(false);
             }
         }
