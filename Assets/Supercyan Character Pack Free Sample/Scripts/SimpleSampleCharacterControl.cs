@@ -148,7 +148,8 @@ public class SimpleSampleCharacterControl : MonoBehaviour
             {
                 // Perform pickup logic
                 // For example, you can destroy the object
-                Destroy(hit.collider.gameObject);
+                //Destroy(hit.collider.gameObject);
+                hit.collider.gameObject.SetActive(false);
             }
         }
     }
