@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class SimpleSampleCharacterControl : MonoBehaviour
 {
@@ -14,7 +16,8 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         /// </summary>
         Direct
     }
-
+    public KeyCode animationTriggerKey = KeyCode.E;
+    public float pickupRange = 2f; // Adjust the range as needed
 
     [SerializeField] private float m_moveSpeed = 2;
     [SerializeField] private float m_turnSpeed = 200;
@@ -121,14 +124,35 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         {
             m_jumpInput = true;
         }
-        if (!m_jumpInput && Input.GetKey(KeyCode.E))
+        if (!m_jumpInput && Input.GetKey(animationTriggerKey))
         {
             for (int j = 0; j < m_animators.Length; j++)
             {
                 m_animators[j].SetTrigger(m_animations[0]);
+                tryPickup();
             }
         }
     }
+
+    private void tryPickup()
+    {
+
+        // Raycast to check for objects in front of the character
+        Ray ray = new Ray(transform.position, transform.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, pickupRange))
+        {
+            // Check if the hit object has the specified tag
+            if (hit.collider.CompareTag("Pickupable"))
+            {
+                // Perform pickup logic
+                // For example, you can destroy the object
+                Destroy(hit.collider.gameObject);
+            }
+        }
+    }
+
 
     private void FixedUpdate()
     {

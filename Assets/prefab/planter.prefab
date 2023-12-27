@@ -615,6 +615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beet (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
+      propertyPath: m_TagString
+      value: Pickupable
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.40856725
@@ -712,6 +716,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_Name
       value: Beet (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
+      propertyPath: m_TagString
+      value: Pickupable
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_LocalPosition.x
@@ -811,6 +819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beet
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
+      propertyPath: m_TagString
+      value: Pickupable
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8085672
@@ -908,6 +920,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_Name
       value: Beet (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
+      propertyPath: m_TagString
+      value: Pickupable
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1007,6 +1023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beet (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
+      propertyPath: m_TagString
+      value: Pickupable
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.40856725
@@ -1104,6 +1124,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_Name
       value: Beet (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
+      propertyPath: m_TagString
+      value: Pickupable
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1203,6 +1227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beet (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
+      propertyPath: m_TagString
+      value: Pickupable
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8085672
@@ -1300,6 +1328,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_Name
       value: Beet (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
+      propertyPath: m_TagString
+      value: Pickupable
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1399,6 +1431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beet (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
+      propertyPath: m_TagString
+      value: Pickupable
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.40856725
@@ -1496,6 +1532,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_Name
       value: Beet (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
+      propertyPath: m_TagString
+      value: Pickupable
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3f18a9925aef4b141b5ed39333229851, type: 3}
       propertyPath: m_LocalPosition.x
