@@ -9,6 +9,7 @@ public class Beweging : MonoBehaviour
     public GameObject popupPanel; // Voeg hier je popup paneel toe vanuit de Unity Editor of instantieer het programmatisch.
     public Text popupText; // Voeg een tekstveld toe aan je popup paneel om de score te tonen.
 
+    public Camera thirdPersonCamera;  // Voeg deze regel toe
 
     public SimpleSampleCharacterControl characterControl; // Referentie naar het script van je speler.
 
@@ -80,9 +81,14 @@ public class Beweging : MonoBehaviour
         Debug.Log("show popup");
         if (popupPanel && popupText)
         {
-            popupText.text = "Goed gedaan! Je score is: " + score;
+            popupText.text = "Goed gedaan! Je score is: " + score.ToString();
             Debug.Log("Goed gedaan! Je score is: " + score.ToString());
             popupPanel.SetActive(true); // Toon het popup paneel
+
+            // Wissel naar third-person camera
+            thirdPersonCamera.enabled = true;
         }
     }
+
+
 }
