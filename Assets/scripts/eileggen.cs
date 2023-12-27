@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class eileggen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject eiPrefab;
+    public Transform eiSpawnPoint;
+    public float legEiInterval = 5f;
+
+    private void Start()
     {
-        
+        StartCoroutine(LegEierenRoutine());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator LegEierenRoutine()
     {
-        
+        while (true)
+        {
+            LegEi();
+            yield return new WaitForSeconds(legEiInterval);
+        }
+    }
+
+    void LegEi()
+    {
+        Instantiate(eiPrefab, eiSpawnPoint.position, Quaternion.identity);
     }
 }
