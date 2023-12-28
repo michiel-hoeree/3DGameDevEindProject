@@ -4,8 +4,9 @@ using UnityEngine.EventSystems;
 
 public class eiOppakken : MonoBehaviour, IPointerClickHandler
 {
-    private static int aantalEierenGlobaal = 0;
+    public static int aantalEierenGlobaal = 0;
     public TMP_Text eierenTellerText; // Verwijzing naar het TMP tekstobject op het canvas
+    public TMP_Text eindeText;
 
     void Start()
     {
@@ -37,6 +38,7 @@ public class eiOppakken : MonoBehaviour, IPointerClickHandler
         if (eierenTellerText != null)
         {
             eierenTellerText.text = "Eieren: " + aantalEierenGlobaal;
+            eindeText.text = "Totaal aantal verzamelde eieren: " + aantalEierenGlobaal;
         }
     }
 }
