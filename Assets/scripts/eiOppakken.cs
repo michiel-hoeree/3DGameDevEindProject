@@ -14,8 +14,9 @@ public class eiOppakken : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        VerzamelEi();
-        VerwijderEi();
+        Debug.Log("Ei geklikt!");
+        VerwijderEi(); // Eerst het ei verwijderen
+        VerzamelEi();  // Dan het aantal eieren verhogen
     }
 
     void VerzamelEi()
