@@ -42,8 +42,13 @@ public class VoedselSpeler : MonoBehaviour
         }
     }
 
-    public int GetVoedselTeller()
+    public int GetVoedselInVoederbak()
     {
         return voedselInVoederbak;
     }
+    public void VerminderVoedselInVoederbak()
+    {
+        voedselInVoederbak--;
+    }
+
 }
