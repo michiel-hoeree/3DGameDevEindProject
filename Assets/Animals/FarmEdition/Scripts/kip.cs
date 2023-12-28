@@ -6,6 +6,7 @@ public class kip : MonoBehaviour
 {
     public float snelheid = 2.0f; // Snelheid van de beweging
     public float veranderRichtingInterval = 2.0f; // Interval om van richting te veranderen
+    public float minAfstandTussenKippen = 1.0f; // Minimale afstand tussen kippen
     public Vector3 hoekpunt1 = new Vector3(-10f, 0f, -10f);
     public Vector3 hoekpunt2 = new Vector3(10f, 0f, 10f);
     public Vector3 hoekpunt3 = new Vector3(10f, 0f, -10f);
@@ -26,6 +27,7 @@ public class kip : MonoBehaviour
 
         // Controleer of de kip binnen de rechthoekige grenzen is en verander de richting indien nodig
         ControleerGrens();
+        ControleerKippen();
     }
 
     private void VeranderRichting()
@@ -48,6 +50,29 @@ public class kip : MonoBehaviour
         if (huidigePositie.x == hoekpunt1.x || huidigePositie.x == hoekpunt2.x || huidigePositie.z == hoekpunt1.z || huidigePositie.z == hoekpunt3.z)
         {
             VeranderRichting();
+        }
+    }
+
+    private void ControleerKippen()
+    {
+        // Vind alle kippen in de scène
+        GameObject[] kippen = GameObject.FindGameObjectsWithTag("Chicken");
+
+        // Loop door alle gevonden kippen
+        foreach (GameObject kip in kippen)
+        {
+            // Controleer of de kip niet zichzelf is
+            if (kip != gameObject)
+            {
+                // Bereken de afstand tussen de huidige kip en de andere kip
+                float afstand = Vector3.Distance(transform.position, kip.transform.position);
+
+                // Als de afstand kleiner is dan de minimaal toegestane afstand, verander de richting
+                if (afstand < minAfstandTussenKippen)
+                {
+                    VeranderRichting();
+                }
+            }
         }
     }
 }

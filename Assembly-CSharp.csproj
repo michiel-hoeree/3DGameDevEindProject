@@ -74,6 +74,7 @@
     <Compile Include="Assets\Farm\Demo\Scripts\Move.cs" />
     <Compile Include="Assets\Animals\FarmEdition\Scripts\kip.cs" />
     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\SimpleSampleCharacterControl.cs" />
+    <Compile Include="Assets\scripts\eiOppakken.cs" />
     <Compile Include="Assets\Farm\Demo\Scripts\Rotate.cs" />
   </ItemGroup>
   <ItemGroup>
