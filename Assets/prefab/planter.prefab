@@ -118,9 +118,10 @@ GameObject:
   - component: {fileID: 3174934411881767160}
   - component: {fileID: 1689131436462148673}
   - component: {fileID: 4650833021535182004}
+  - component: {fileID: 6274353171467230724}
   m_Layer: 0
   m_Name: pickupAble (9)
-  m_TagString: Pickupable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,6 +225,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDisable: {fileID: 1825996342550676725}
+--- !u!114 &6274353171467230724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434613002232086116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5a8dcd0af45d44184c5dbc0cd2bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsList:
+  - pickupAble
 --- !u!1 &1026682681709021784
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,9 +462,10 @@ GameObject:
   - component: {fileID: 3387753884017937223}
   - component: {fileID: 6610772671818938800}
   - component: {fileID: 635127125341471343}
+  - component: {fileID: 7497840725367445089}
   m_Layer: 0
   m_Name: pickupAble (4)
-  m_TagString: Pickupable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -553,6 +569,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDisable: {fileID: 7338453711231955772}
+--- !u!114 &7497840725367445089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128743320380054511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5a8dcd0af45d44184c5dbc0cd2bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsList:
+  - pickupAble
 --- !u!1 &2306345783091743938
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,9 +596,10 @@ GameObject:
   - component: {fileID: 104394237891771620}
   - component: {fileID: 172154920727290574}
   - component: {fileID: 8496397187828573644}
+  - component: {fileID: 3423340427157061313}
   m_Layer: 0
   m_Name: pickupAble
-  m_TagString: Pickupable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -672,6 +703,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDisable: {fileID: 5555671908990333426}
+--- !u!114 &3423340427157061313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2306345783091743938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5a8dcd0af45d44184c5dbc0cd2bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsList:
+  - pickupAble
 --- !u!1 &2827538668887572150
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,9 +835,10 @@ GameObject:
   - component: {fileID: 77766026533132408}
   - component: {fileID: 5228020737399491629}
   - component: {fileID: 8114285390410311649}
+  - component: {fileID: 3533835056086844363}
   m_Layer: 0
   m_Name: pickupAble (5)
-  m_TagString: Pickupable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -896,6 +942,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDisable: {fileID: 5632767657283302252}
+--- !u!114 &3533835056086844363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3421753817905739442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5a8dcd0af45d44184c5dbc0cd2bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsList:
+  - pickupAble
 --- !u!1 &4137712866803455181
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,9 +969,10 @@ GameObject:
   - component: {fileID: 3769968659726881153}
   - component: {fileID: 4271976092935657682}
   - component: {fileID: 6663365289596332346}
+  - component: {fileID: 6040178384660254309}
   m_Layer: 0
   m_Name: pickupAble (8)
-  m_TagString: Pickupable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1015,6 +1076,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDisable: {fileID: 6074609520184084103}
+--- !u!114 &6040178384660254309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4137712866803455181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5a8dcd0af45d44184c5dbc0cd2bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsList:
+  - pickupAble
 --- !u!1 &4813285678740623845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,9 +1103,10 @@ GameObject:
   - component: {fileID: 5450955355349100003}
   - component: {fileID: 7345935560101135583}
   - component: {fileID: 6090687747232561394}
+  - component: {fileID: 1756420364261405432}
   m_Layer: 0
   m_Name: pickupAble (2)
-  m_TagString: Pickupable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1134,6 +1210,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDisable: {fileID: 8513231039042284183}
+--- !u!114 &1756420364261405432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4813285678740623845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5a8dcd0af45d44184c5dbc0cd2bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsList:
+  - pickupAble
 --- !u!1 &5380751941784968911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,9 +1237,10 @@ GameObject:
   - component: {fileID: 7226379750932906732}
   - component: {fileID: 3669900024609527897}
   - component: {fileID: 5655289412813331715}
+  - component: {fileID: 2997874268078150991}
   m_Layer: 0
   m_Name: pickupAble (6)
-  m_TagString: Pickupable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1253,6 +1344,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDisable: {fileID: 7800311625231570297}
+--- !u!114 &2997874268078150991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5380751941784968911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5a8dcd0af45d44184c5dbc0cd2bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsList:
+  - pickupAble
 --- !u!1 &5524608858974924367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,6 +1723,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5974835549654261981}
+  - component: {fileID: 4889368370007360400}
   m_Layer: 0
   m_Name: planter
   m_TagString: Untagged
@@ -1646,6 +1752,20 @@ Transform:
   - {fileID: 6201529298377014132}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4889368370007360400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717660601687984180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5a8dcd0af45d44184c5dbc0cd2bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsList:
+  - pickupAble
 --- !u!1 &6074609520184084103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,9 +1884,10 @@ GameObject:
   - component: {fileID: 5853426156320517207}
   - component: {fileID: 8278609577857316792}
   - component: {fileID: 2234536337161058582}
+  - component: {fileID: 781678463047348640}
   m_Layer: 0
   m_Name: pickupAble (7)
-  m_TagString: Pickupable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1870,6 +1991,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDisable: {fileID: 8439026907681537624}
+--- !u!114 &781678463047348640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6524654340973917365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5a8dcd0af45d44184c5dbc0cd2bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsList:
+  - pickupAble
 --- !u!1 &6828301801130130246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,9 +2018,10 @@ GameObject:
   - component: {fileID: 6763159226377404214}
   - component: {fileID: 2801962221254226686}
   - component: {fileID: 8556035762445990943}
+  - component: {fileID: 1051120861118155739}
   m_Layer: 0
   m_Name: pickupAble (1)
-  m_TagString: Pickupable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1989,6 +2125,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDisable: {fileID: 7026813166798296107}
+--- !u!114 &1051120861118155739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828301801130130246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5a8dcd0af45d44184c5dbc0cd2bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsList:
+  - pickupAble
 --- !u!1 &6853205068486624319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,9 +2152,10 @@ GameObject:
   - component: {fileID: 5798293829269521256}
   - component: {fileID: 4995862389253800867}
   - component: {fileID: 6864475307138560815}
+  - component: {fileID: 5484426280408301423}
   m_Layer: 0
   m_Name: pickupAble (3)
-  m_TagString: Pickupable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2108,6 +2259,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDisable: {fileID: 2827538668887572150}
+--- !u!114 &5484426280408301423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6853205068486624319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5a8dcd0af45d44184c5dbc0cd2bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsList:
+  - pickupAble
 --- !u!1 &7026813166798296107
 GameObject:
   m_ObjectHideFlags: 0

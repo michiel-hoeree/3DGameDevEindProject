@@ -17,7 +17,9 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         Direct
     }
     public KeyCode animationTriggerKey = KeyCode.E;
-    public float pickupRange = 2f; // Adjust the range as needed
+    public float pickupRange = 2f;
+    private TagManager tagManager;
+    private int beets = 0;
 
     [SerializeField] private float m_moveSpeed = 2;
     [SerializeField] private float m_turnSpeed = 200;
@@ -137,20 +139,33 @@ public class SimpleSampleCharacterControl : MonoBehaviour
     private void tryPickup()
     {
 
+
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, pickupRange))
         {
-            if (hit.collider.CompareTag("Pickupable"))
+            TagManager tagManager = hit.collider.GetComponent<TagManager>();
+            if (tagManager != null)
             {
-                hit.collider.gameObject.SetActive(false);
+                if (tagManager.HasTag("pickupAble"))
+                {
+
+                    if (tagManager.HasTag("isBeet"))
+                    {
+                        beets++;
+                    }
+                    hit.collider.gameObject.SetActive(false);
+                }
             }
+
         }
     }
 
 
-    private void FixedUpdate()
+
+
+private void FixedUpdate()
     {
         m_animator.SetBool("Grounded", m_isGrounded);
 
