@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Beweging : MonoBehaviour
 {
+    public GameObject panelToHide; // Sleep je paneel naar deze variabele in de Inspector.
+
+    public Button goToSceneButton; // Sleep je knop (Button) naar deze variabele in de Inspector.
+    public string targetSceneName = "start";
+
     public GameObject popupPanel; // Voeg hier je popup paneel toe vanuit de Unity Editor of instantieer het programmatisch.
     public Text popupText; // Voeg een tekstveld toe aan je popup paneel om de score te tonen.
 
@@ -17,10 +23,33 @@ public class Beweging : MonoBehaviour
 
     private void Start()
     {
-        
+        StartCoroutine(HidePanelAfterDelay(10f));
+
         characterControl = GetComponent<SimpleSampleCharacterControl>();
 
         Debug.Log("Start methode aangeroepen.");
+
+        if (goToSceneButton != null)
+        {
+            // Voeg een luisteraar toe aan de knop om te reageren wanneer erop wordt geklikt.
+            goToSceneButton.onClick.AddListener(GoToScene);
+        }
+    }
+
+    IEnumerator HidePanelAfterDelay(float delay)
+    {
+        // Wacht voor het opgegeven aantal seconden.
+        yield return new WaitForSeconds(delay);
+
+        // Controleer of het paneel niet null is en verberg het als dat zo is.
+        if (panelToHide != null)
+        {
+            panelToHide.SetActive(false);
+        }
+    }
+    private void GoToScene()
+    {
+        SceneManager.LoadScene(targetSceneName);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -81,7 +110,8 @@ public class Beweging : MonoBehaviour
         Debug.Log("show popup");
         if (popupPanel && popupText)
         {
-            popupText.text = "Goed gedaan! Je score is: " + score.ToString();
+            popupText.text = score.ToString();
+
             Debug.Log("Goed gedaan! Je score is: " + score.ToString());
             popupPanel.SetActive(true); // Toon het popup paneel
 
