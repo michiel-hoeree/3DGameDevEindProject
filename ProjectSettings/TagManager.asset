@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Pickupable
+  - Bug
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - bugs
   - Water
   - UI
   - 
