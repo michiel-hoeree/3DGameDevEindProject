@@ -52,7 +52,7 @@ public class SimpleSampleCharacterControl : MonoBehaviour
 
     private List<Collider> m_collisions = new List<Collider>();
 
-
+    private bool showGUI = false;
 
     private void Start()
     {
@@ -156,8 +156,8 @@ public class SimpleSampleCharacterControl : MonoBehaviour
                         beets++;
                         if (beets >= 30)
                         {
-                            Debug.Log("Je hebt genoeg beets opgepakt");
-                        }
+                           showGUI = true;
+}
                     }
                     hit.collider.gameObject.SetActive(false);
                 }
@@ -166,10 +166,27 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         }
     }
 
+    private void OnGUI()
+    {
+        if (showGUI)
+        {
+            string text = "Groenten importeren is zeer slecht voor het milleu.\n";
+            text += "Daarom kan het zo goed zijn om je eigen groentjes te planten.\n";
+            text += "Het is daarbij ook zoveel leuker en gezonder!";
 
 
+            GUI.Box(new Rect(25, 25, 400, 100), text);
+            if (GUI.Button(new Rect(10, 120, 150, 40), "Terug naar level select."))
+            {
 
-private void FixedUpdate()
+                enabled = false;
+
+            }
+        }
+    }
+
+
+    private void FixedUpdate()
     {
         m_animator.SetBool("Grounded", m_isGrounded);
 
