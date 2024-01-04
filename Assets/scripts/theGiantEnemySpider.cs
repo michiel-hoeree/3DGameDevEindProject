@@ -30,7 +30,6 @@ public class SpiderAI : MonoBehaviour
         targetObject = newTarget;
     }
 
-    // OnCollisionEnter is called when the spider collides with something
     void OnCollisionEnter(Collision collision)
     {
         // Check if the collision is with the target object
