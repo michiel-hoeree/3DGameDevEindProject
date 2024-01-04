@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -17,7 +17,7 @@ public class CubeCollider : MonoBehaviour
             if (collider.CompareTag(targetTag))
             {
                 //Debug.Log(collider + " bij de planten");
-                collider.gameObject.SetActive(false);
+                collider.gameObject.transform.parent.gameObject.SetActive(false);
                 ResetBeets();
                 break;
             }

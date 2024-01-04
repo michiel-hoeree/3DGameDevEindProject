@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour
 {
     public GameObject prefabToSpawn;
-    public Transform targetObject;
+    public List<Transform> targetObjects = new List<Transform>();
     public float spawnInterval = 5f; // Set the interval in seconds
     void Start()
     {
@@ -17,11 +17,13 @@ public class ObjectSpawner : MonoBehaviour
     {
 
         GameObject newObject = Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
+        
         Transform childTransform = newObject.transform.GetChild(1);
         SpiderAI scriptWithTarget = childTransform.GetComponent<SpiderAI>();
         if (scriptWithTarget != null)
         {
-            scriptWithTarget.SetTargetObject(targetObject);
+            int randomIndex = UnityEngine.Random.Range(0, targetObjects.Count);
+            scriptWithTarget.SetTargetObject(targetObjects[randomIndex]);
         }
     }
 }

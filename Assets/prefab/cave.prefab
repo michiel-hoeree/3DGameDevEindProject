@@ -120,7 +120,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 8191117056895866737, guid: 99276f78701c72545bc68d7d62a468b4,
     type: 3}
-  targetObject: {fileID: 0}
+  targetObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnInterval: 5
 --- !u!1 &5995377634088280603
 GameObject:

@@ -3,26 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 public class SpiderAI : MonoBehaviour
 {
+
     public Transform targetObject;
-    public float moveSpeed = 5f;
+    public float rotationSpeed = 5f;
+    public float moveSpeed = 3f;
+
+    private bool isFacingTarget = false;
 
     void Update()
     {
-        if (targetObject != null)
+        if (!isFacingTarget)
         {
-            MoveTowardsTarget();
+            RotateTowardsTarget();
+
+            if (IsFacingTarget())
+            {
+                isFacingTarget = true;
+            }
+        }
+        else
+        {
+            MoveForward();
         }
     }
-
-    void MoveTowardsTarget()
+    void RotateTowardsTarget()
     {
-        Vector3 direction = targetObject.position - transform.position;
-        direction.Normalize();
+        Vector3 directionToTarget = (targetObject.position - transform.position).normalized;
 
-        transform.Translate(direction * moveSpeed * Time.deltaTime);
+        Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
 
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
+    bool IsFacingTarget()
+    {
+        float angle = Vector3.Angle(transform.forward, (targetObject.position - transform.position).normalized);
+        return Mathf.Abs(angle) < 1f;
+    }
+    void MoveForward()
+    {
+        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
     }
 
     public void SetTargetObject(Transform newTarget)
