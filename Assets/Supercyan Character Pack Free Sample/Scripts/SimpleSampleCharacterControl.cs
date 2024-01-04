@@ -154,6 +154,10 @@ public class SimpleSampleCharacterControl : MonoBehaviour
                     if (tagManager.HasTag("isBeet"))
                     {
                         beets++;
+                        if (beets >= 30)
+                        {
+                            Debug.Log("Je hebt genoeg beets opgepakt");
+                        }
                     }
                     hit.collider.gameObject.SetActive(false);
                 }

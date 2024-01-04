@@ -19,15 +19,12 @@ public class SpiderAI : MonoBehaviour
         Vector3 direction = targetObject.position - transform.position;
         direction.Normalize();
 
-        // Move the spider towards the target
         transform.Translate(direction * moveSpeed * Time.deltaTime);
 
-        // Rotate the spider to face the target
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
-    // Method to set the target object for the spider to move towards
     public void SetTargetObject(Transform newTarget)
     {
         targetObject = newTarget;
