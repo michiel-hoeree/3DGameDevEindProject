@@ -63,12 +63,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1178586730701851464, guid: 6a90fc4f23741bf47b02318b3a4a7aa6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4375382654496483180, guid: 6a90fc4f23741bf47b02318b3a4a7aa6,
         type: 3}
       propertyPath: m_Name
       value: Grass 2 Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1178586730701851464, guid: 6a90fc4f23741bf47b02318b3a4a7aa6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

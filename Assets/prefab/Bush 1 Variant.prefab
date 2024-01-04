@@ -78,6 +78,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush 1 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5589334784174121095, guid: e361bee9715c4aa4980bb005ac60d7e9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
