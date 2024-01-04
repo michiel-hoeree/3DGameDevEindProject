@@ -1080,6 +1080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxSize: {x: 1.7, y: 1, z: 3}
   targetTag: Bug
+  beets: {fileID: 8496246277224569159}
 --- !u!1 &4137712866803455181
 GameObject:
   m_ObjectHideFlags: 0
