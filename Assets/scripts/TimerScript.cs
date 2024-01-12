@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -9,14 +8,19 @@ public class TimerScript : MonoBehaviour
     public GameObject huidigCanvas;
     public GameObject eindCanvas;
 
-    float timerDurationInMinutes = 1f;  // Stel de gewenste duur in op 1 minuut
+    float initialDelay = 21f; // Wachttijd voordat de timer begint
+    float timerDurationInMinutes = 2f; // Stel de gewenste duur in op 2 minuten
     float timer;
 
     bool isTimeOver = false;
 
     void Update()
     {
-        if (!isTimeOver)
+        if (initialDelay > 0f)
+        {
+            initialDelay -= Time.deltaTime;
+        }
+        else if (!isTimeOver)
         {
             timer -= Time.deltaTime;
 
@@ -31,7 +35,7 @@ public class TimerScript : MonoBehaviour
 
     void Start()
     {
-        timer = timerDurationInMinutes * 60f;  // Zet de timer om naar seconden
+        timer = timerDurationInMinutes * 60f; // Zet de timer om naar seconden
         UpdateTimerText(); // Voeg deze lijn toe om de timer-text bij te werken bij het starten
     }
 
@@ -45,7 +49,6 @@ public class TimerScript : MonoBehaviour
 
             // Update de TMP Text met de geformatteerde timer
             timerText.text = string.Format("{0:00}:{1:00}", minuten, seconden);
-
         }
         else
         {
@@ -61,7 +64,7 @@ public class TimerScript : MonoBehaviour
     void StopSpel()
     {
         isTimeOver = true; // Zet de tijd over status aan
-        Time.timeScale = 0f;  // Zet het spel op pauze
+        Time.timeScale = 0f; // Zet het spel op pauze
 
         // Voeg hier code toe om het spel te stoppen, de pop-up weer te geven, etc.
         Debug.Log("Het spel is gestopt!");
