@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8150157925276444815}
   - component: {fileID: 1422028594956116205}
   - component: {fileID: 5153385296370934338}
+  - component: {fileID: -8377483781317805673}
   m_Layer: 0
   m_Name: OilCan2
-  m_TagString: Untagged
+  m_TagString: afval
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,6 +65,27 @@ MonoBehaviour:
   beweegSnelheid: 0.4
   beweegAfstand: 0.4
   starthoogte: -1
+--- !u!65 &-8377483781317805673
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090281215914330657}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2780520813820762943
 GameObject:
   m_ObjectHideFlags: 0
