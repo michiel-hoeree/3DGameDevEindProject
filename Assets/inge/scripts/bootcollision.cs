@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class bootcollision : MonoBehaviour
 {
-    public int teller = 0;
+    public static int teller { get; set; } = 0;
+    public Canvas eindcanvas;
+
     void OnTriggerEnter(Collider other)
     {
         // Controleer of het object waarmee is gebotst het afval is
@@ -13,6 +15,16 @@ public class bootcollision : MonoBehaviour
             // Verwijder het afvalobject
             Destroy(other.gameObject);
             teller++;
+            ControleerEinde();
+        }
+    }
+    void ControleerEinde()
+    {
+        if (teller >= afvalmaker.aantalflessen)
+        {
+            Debug.Log("einde game");
+            eindcanvas.gameObject.SetActive(true);
+            
         }
     }
 }

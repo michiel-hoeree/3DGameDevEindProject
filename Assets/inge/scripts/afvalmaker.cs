@@ -13,7 +13,8 @@ public class afvalmaker : MonoBehaviour
     float randomRotation;
 
     public float hoogte = -0.8f;
-    public int aantalFlessenPerSoort = 2;
+    public static int aantalFlessenPerSoort = 2;
+    public static int  aantalflessen { get; private set; } = 3*aantalFlessenPerSoort;
     // Start is called before the first frame update
     void Start()
     {
