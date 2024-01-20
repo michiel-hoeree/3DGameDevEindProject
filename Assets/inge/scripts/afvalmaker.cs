@@ -8,8 +8,8 @@ public class afvalmaker : MonoBehaviour
     public GameObject prefab2;
     public GameObject prefab3;
     //zee is 200 op 200
-    public float grootsteXY = 10;
-    public float kleinsteXY = -10;
+    public float grootsteXY = 30;
+    public float kleinsteXY = -30;
     float randomRotation;
 
     public float hoogte = -0.8f;

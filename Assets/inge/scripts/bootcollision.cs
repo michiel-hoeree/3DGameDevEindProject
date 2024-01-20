@@ -6,9 +6,11 @@ public class bootcollision : MonoBehaviour
 {
     public static int teller { get; set; } = 0;
     public Canvas eindcanvas;
+    public AudioSource splash;
 
     void OnTriggerEnter(Collider other)
     {
+        splash.Play();
         // Controleer of het object waarmee is gebotst het afval is
         if (other.CompareTag("afval"))
         {
@@ -22,7 +24,6 @@ public class bootcollision : MonoBehaviour
     {
         if (teller >= afvalmaker.aantalflessen)
         {
-            Debug.Log("einde game");
             eindcanvas.gameObject.SetActive(true);
             
         }
